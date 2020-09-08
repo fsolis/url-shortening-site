@@ -2,11 +2,27 @@
   import { writable } from "svelte/store";
   import { slide } from "svelte/transition";
   import { quintOut } from "svelte/easing";
+  import { onMount } from "svelte";
 
   const isMobileMenuVisible = writable<boolean>(false);
 
-  const handleMobileMenueToggle = event =>
-    isMobileMenuVisible.update(isOpen => !isOpen);
+  const handleMobileMenueToggle = (event) =>
+    isMobileMenuVisible.update((isOpen) => !isOpen);
+
+  const hideMobileMenuOnResize = () => {
+    isMobileMenuVisible.set(false);
+  };
+
+  // If the site resizes to a bigger screen we want to hide the mobile menu
+  // so that we do not get in a situation where we have the mobile menu open
+  // in a larger screen without a way to close it
+  const resizeListener = window.matchMedia("screen and (max-width: 992px)");
+
+  onMount(() => {
+    resizeListener.addListener(hideMobileMenuOnResize);
+
+    return () => resizeListener.removeListener(hideMobileMenuOnResize);
+  });
 </script>
 
 <style type="text/scss">
