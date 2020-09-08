@@ -1,10 +1,12 @@
 <script type="ts">
   import { writable } from "svelte/store";
-  import type { MouseEventHandler } from "svelte";
+  import { slide } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
+
   const isMobileMenuVisible = writable<boolean>(false);
 
-  const handleMobileMenueToggle = (event) =>
-    isMobileMenuVisible.update((isOpen) => !isOpen);
+  const handleMobileMenueToggle = event =>
+    isMobileMenuVisible.update(isOpen => !isOpen);
 </script>
 
 <style type="text/scss">
@@ -25,6 +27,7 @@
       flex: 1;
       justify-content: space-between;
       align-items: center;
+      max-width: 650px;
     }
 
     &__right {
@@ -152,15 +155,15 @@
   </section>
 
   {#if $isMobileMenuVisible === true}
-    <section class="mobile-nav">
+    <section
+      class="mobile-nav"
+      transition:slide={{ delay: 180, duration: 250, easing: quintOut }}>
       <a class="mobile-nav__link" href="#">Features</a>
       <a class="mobile-nav__link" href="#">Pricing</a>
       <a class="mobile-nav__link" href="#">Resources</a>
       <hr class="mobile-nav__divider" />
       <a class="mobile-nav__link" href="#">Login</a>
-      <a class="mobile-nav__link mobile-nav__link--primary" href="#">
-        Sign Up
-      </a>
+      <a class="mobile-nav__link mobile-nav__link--primary" href="#">Sign Up</a>
     </section>
   {/if}
 </nav>
