@@ -1,0 +1,34 @@
+$mobile: 375px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1440px;
+
+@mixin mobile {
+    @media screen and (min-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (min-width: $laptop) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin custom-breakpoint($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
