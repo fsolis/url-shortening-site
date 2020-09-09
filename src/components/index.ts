@@ -1,2 +1,2 @@
-
-export { default as NavBar } from './NavBar.svelte';
+export * from './Hero';
+export * from './NavBar';

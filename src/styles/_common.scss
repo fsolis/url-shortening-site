@@ -1,0 +1,15 @@
+@import './variables';
+
+.primary-btn {
+    background-color: $cyan;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-weight: $bold;
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+        background-color: transparentize($cyan, 0.4);
+        color: $white;
+    }
+}

@@ -1,10 +1,15 @@
 <script type="ts">
-  import { NavBar } from "./components";
+  import { Hero, NavBar } from "./components";
 </script>
 
 <style type="text/scss">
+  .shorty-app {
+    max-width: 85%;
+    margin: 0 auto;
+  }
 </style>
 
-<main>
+<main class="shorty-app">
   <NavBar />
+  <Hero />
 </main>
