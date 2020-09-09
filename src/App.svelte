@@ -1,5 +1,5 @@
-<script type="ts">
-  import { Hero, NavBar } from "./components";
+<script lang="ts">
+  import { Hero, NavBar, UrlComponent } from "./components";
 </script>
 
 <style type="text/scss">
@@ -12,4 +12,5 @@
 <main class="shorty-app">
   <NavBar />
   <Hero />
+  <UrlComponent />
 </main>

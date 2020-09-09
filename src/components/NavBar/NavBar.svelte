@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
   import { writable } from "svelte/store";
   import { slide } from "svelte/transition";
   import { quintOut } from "svelte/easing";
