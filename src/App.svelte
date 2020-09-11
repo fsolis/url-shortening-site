@@ -1,5 +1,15 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import { Hero, NavBar, UrlComponent } from "./components";
+  import { loadLocalStorage, syncLocalStorage } from "./Utils";
+
+  onMount(() => {
+    loadLocalStorage();
+
+    return () => {
+      syncLocalStorage();
+    };
+  });
 </script>
 
 <style type="text/scss">

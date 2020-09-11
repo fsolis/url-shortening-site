@@ -43,11 +43,11 @@
         font-size: 2.5rem;
 
         @include tablet {
-            font-size: 2.8rem;
+            font-size: 3rem;
         }
 
         @include laptop {
-            font-size: 3rem;
+            font-size: 3.5rem;
         }
     }
 
@@ -63,6 +63,7 @@
         @include tablet {
             max-width: 165px;
             margin: 0;
+            padding: 15px 30px;
         }
     }
 }
