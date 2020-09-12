@@ -1,0 +1,58 @@
+@import '../../styles/main';
+
+.url-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $white;
+    font-weight: $semi-bold;
+    margin: 1rem 0;
+    border-radius: 7px;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    &__url {
+        display: flex;
+        padding: 0 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        align-items: center;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid $gray;
+        padding: 1rem;
+
+        @include tablet {
+            flex-direction: row;
+            border-top: none;
+        }
+    }
+
+    &__short-url {
+        color: $cyan;
+        margin: auto 0;
+    }
+
+    &__btn {
+        border-radius: 5px;
+        margin: 1rem 0 0 0;
+
+        @include tablet {
+            width: 120px;
+            margin: 0.5rem 0 0.5rem 1rem;
+        }
+
+        &--selected {
+            background-color: $dark-violet;
+
+            &:hover {
+                background-color: $dark-violet;
+            }
+        }
+    }
+}

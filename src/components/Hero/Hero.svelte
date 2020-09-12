@@ -9,7 +9,7 @@
       Build your brand's recognition and get detailed insights on how your links
       are preforming
     </h4>
-    <button class="primary-btn">Get Started</button>
+    <button class="hero__btn primary-btn">Get Started</button>
   </div>
   <div class="hero__right">
     <img
