@@ -18,9 +18,16 @@
   .shorty-app {
     max-width: 85%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
 
     &__content {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
 
       &:after {
         content: "";
