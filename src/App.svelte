@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { Hero, NavBar, UrlComponent, UrlList } from "./components";
+  import { Features, Hero, NavBar, UrlComponent, UrlList } from "./components";
   import { loadLocalStorage, syncLocalStorage } from "./Utils";
 
   onMount(() => {
@@ -13,34 +13,7 @@
 </script>
 
 <style type="text/scss">
-  @import "./styles/main";
-
-  .shorty-app {
-    max-width: 85%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    height: 100%;
-
-    &__content {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-
-      &:after {
-        content: "";
-        position: absolute;
-        background-color: transparentize($gray, 0.75);
-        top: 20%;
-        bottom: -10%;
-        left: -10%;
-        right: -10%;
-        z-index: -1;
-      }
-    }
-  }
+  @import "./App.scss";
 </style>
 
 <main class="shorty-app">
@@ -49,5 +22,6 @@
   <section class="shorty-app__content">
     <UrlComponent />
     <UrlList />
+    <Features />
   </section>
 </main>

@@ -1,0 +1,27 @@
+@import '../../styles/main';
+
+.features {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: $very-dark-violet;
+
+    &__heading-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+    &__header,
+    &__sub-header {
+        text-align: center;
+    }
+
+    &__sub-header {
+        color: $gray-violet;
+        font-weight: $semi-bold;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}

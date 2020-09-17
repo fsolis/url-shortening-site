@@ -1,0 +1,111 @@
+@import '../../styles/main';
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+
+    @include laptop {
+        flex-direction: row;
+        margin-top: 60px;
+        margin-bottom: 80px;
+    }
+}
+
+.feature-list-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: $white;
+    border-radius: 5px;
+    justify-content: center;
+    min-height: 235px;
+    margin: 0;
+    margin-bottom: 60px;
+
+    @include laptop {
+        margin: 15px;
+    }
+
+    &__icon-wrapper {
+        position: absolute;
+        background-color: $dark-violet;
+        padding: 10px;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        left: calc(50% - 30px);
+        top: -30px;
+
+        @include laptop {
+            left: 10%;
+        }
+    }
+
+    &__icon {
+        height: 40px;
+        width: 40px;
+        margin: 10px 0 0 10px;
+    }
+
+    &__header {
+        margin-top: 47px;
+        text-align: center;
+        padding-left: 1rem;
+
+        @include laptop {
+            margin-top: 60px;
+            text-align: start;
+        }
+    }
+
+    &__desc {
+        padding: 1rem;
+        margin-top: 0;
+        text-align: center;
+
+        @include laptop {
+            text-align: start;
+        }
+    }
+
+    &:not(:first-of-type) {
+        &:before {
+            content: "";
+            position: absolute;
+            height: 100px;
+            width: 10px;
+            background-color: $cyan;
+            top: -100px;
+            left: calc(50% + 5px);
+
+        }
+
+        @include laptop {
+            &:before {
+                height: 10px;
+                width: 30px;
+                left: -30px;
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        top: 40px;
+
+        @include laptop {
+            &:before {
+                top: 100px;
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        top: 80px;
+
+        @include laptop {
+            &:before {
+                top: 60px;
+            }
+        }
+    }
+}
