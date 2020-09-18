@@ -1,0 +1,43 @@
+@import '../../styles/main';
+
+.boost {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    margin-top: 100px;
+    min-height: 225px;
+    position: relative;
+
+
+    &:after {
+        content: "";
+        position: absolute;
+        background-color: $dark-violet;
+        background-image: url('../assets/bg-boost-mobile.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 0;
+        bottom: 0;
+        left: -50%;
+        right: -50%;
+        z-index: -1;
+    }
+
+    @include laptop {
+        &:after {
+            background-image: url('../assets/bg-boost-desktop.svg');
+        }
+    }
+
+    &__header {
+        text-align: center;
+        color: $white;
+    }
+
+    &__btn {
+        max-width: 200px;
+        margin: 1rem auto;
+    }
+}

@@ -1,6 +1,13 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { Features, Hero, NavBar, UrlComponent, UrlList } from "./components";
+  import {
+    Boost,
+    Features,
+    Hero,
+    NavBar,
+    UrlComponent,
+    UrlList
+  } from "./components";
   import { loadLocalStorage, syncLocalStorage } from "./Utils";
 
   onMount(() => {
@@ -24,4 +31,5 @@
     <UrlList />
     <Features />
   </section>
+  <Boost />
 </main>
