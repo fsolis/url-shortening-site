@@ -3,10 +3,11 @@
   import {
     Boost,
     Features,
+    Footer,
     Hero,
     NavBar,
     UrlComponent,
-    UrlList
+    UrlList,
   } from "./components";
   import { loadLocalStorage, syncLocalStorage } from "./Utils";
 
@@ -32,4 +33,5 @@
     <Features />
   </section>
   <Boost />
+  <Footer />
 </main>

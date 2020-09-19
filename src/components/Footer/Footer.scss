@@ -1,0 +1,32 @@
+@import '../../styles/main';
+
+.footer {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+
+    &:after {
+        content: "";
+        position: absolute;
+        background-color: $very-dark-violet;
+        top: 0;
+        left: -50%;
+        right: -50%;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    @include laptop {
+        flex-direction: row;
+    }
+
+    &__header {
+        text-align: center;
+
+        @include laptop {
+            text-align: start;
+        }
+    }
+}

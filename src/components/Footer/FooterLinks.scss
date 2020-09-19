@@ -1,0 +1,42 @@
+@import '../../styles/main';
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+
+    @include laptop {
+        flex-direction: row;
+    }
+}
+
+.footer-link-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 2rem;
+    align-items: center;
+
+    &__header {
+        font-weight: $bold;
+        text-align: center;
+
+        @include laptop {
+            text-align: start;
+        }
+    }
+
+    &__link {
+        color: $gray-violet;
+        margin: 0.25rem 0;
+        max-width: min-content;
+        text-align: center;
+        white-space: nowrap;
+
+        @include laptop {
+            text-align: start;
+        }
+
+        &:hover {
+            color: $cyan;
+        }
+    }
+}
