@@ -66,6 +66,8 @@
       bind:this={inputRef}
       class="url-input__input"
       class:url-input__input--error={$hasError === true}
+      name="url"
+      title="URL Input"
       type="text"
       placeholder="Shorten a link here..." />
     {#if $hasEmptyError === true}
